@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pratik Wankhede - Portfolio</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <style>
+    /* Custom CSS pulled from style.css */
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f8f9fa;
+      color: #343a40;
+      padding-top: 56px; /* Adjust for fixed navbar */
+    }
+    .navbar-dark .navbar-brand {
+      font-weight: 700;
+      color: #fff;
+      transition: color 0.3s ease;
+    }
+    .navbar-dark .navbar-brand:hover {
+      color: #00bcd4;
+    }
+    .navbar-dark .nav-link {
+      color: rgba(255, 255, 255, 0.75);
+      transition: color 0.3s ease;
+    }
+    .navbar-dark .nav-link:hover, .navbar-dark .nav-link.active {
+      color: #fff;
+    }
+    .hero-section {
+      background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1515879222452-f67d3e583e8b') no-repeat center center/cover;
+      min-height: 80vh;
+      position: relative;
+    }
+    .hero-content {
+      background: rgba(0, 0, 0, 0.5);
+      backdrop-filter: blur(5px);
+      padding: 3rem;
+      border-radius: 15px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    .btn-primary {
+      background-color: #00bcd4;
+      border-color: #00bcd4;
+      transition: transform 0.3s ease;
+    }
+    .btn-primary:hover {
+      background-color: #0097a7;
+      border-color: #0097a7;
+      transform: translateY(-3px);
+    }
+    .section-title {
+      font-weight: 600;
+      position: relative;
+      display: inline-block;
+      margin-bottom: 2rem;
+    }
+    .section-title::after {
+      content: '';
+      position: absolute;
+      left: 50%;
+      bottom: -10px;
+      transform: translateX(-50%);
+      height: 3px;
+      width: 60px;
+      background-color: #00bcd4;
+      border-radius: 5px;
+    }
+    .profile-img {
+      max-width: 250px;
+      border: 5px solid #fff;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+    .profile-img:hover {
+      transform: scale(1.05);
+    }
+    .skill-card, .project-card {
+      border-radius: 15px;
+      border: none;
+      background-color: #fff;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .skill-card:hover, .project-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    }
+    .project-card .card-img-top {
+      height: 250px;
+      object-fit: cover;
+      border-top-left-radius: 15px;
+      border-top-right-radius: 15px;
+    }
+    .contact-form .form-control {
+      border-radius: 10px;
+      border: 1px solid #ced4da;
+      box-shadow: none;
+    }
+    .contact-form .form-control:focus {
+      border-color: #00bcd4;
+      box-shadow: 0 0 0 0.25rem rgba(0, 188, 212, 0.25);
+    }
+    .animate-on-scroll {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    }
+    .animate-on-scroll.in-view {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .delay-1 { transition-delay: 0.1s; }
+    .delay-2 { transition-delay: 0.2s; }
+    .delay-3 { transition-delay: 0.3s; }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Pratik Wankhede</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero-section text-center d-flex align-items-center justify-content-center text-white">
+    <div class="container hero-content">
+      <h1 class="display-3 fw-bold animate-on-scroll">Hello, I'm Pratik Wankhede 👋</h1>
+      <p class="lead mt-3 animate-on-scroll delay-1">CSBS student at JSPM College, Pune. I build things with code.</p>
+      <a class="btn btn-primary btn-lg mt-4 animate-on-scroll delay-2" href="projects.html">View My Work</a>
+    </div>
+  </header>
+
+  <section id="about" class="py-5">
+    <div class="container">
+      <h2 class="section-title text-center mb-5 animate-on-scroll">About Me</h2>
+      <div class="row align-items-center animate-on-scroll">
+        <div class="col-md-6 mb-4 mb-md-0">
+          <p class="fs-5">I'm a passionate and dedicated Computer Science and Business Systems student at JSPM College, Pune. My academic journey focuses on the intersection of technical skills and business principles. I love to turn complex problems into clean, efficient, and user-friendly solutions.</p>
+          <p class="fs-5 mt-3">My projects reflect my commitment to learning and my ability to adapt to new technologies. I am always excited to collaborate and contribute to impactful projects.</p>
+        </div>
+        <div class="col-md-6 text-center">
+          <img src="https://via.placeholder.com/400x400.png?text=Pratik+Wankhede" class="img-fluid rounded-circle profile-img" alt="Pratik Wankhede Profile Picture">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills" class="bg-dark text-white py-5">
+    <div class="container">
+      <h2 class="section-title text-center mb-5 animate-on-scroll">Skills</h2>
+      <div class="row text-center animate-on-scroll">
+        <div class="col-md-4 mb-4">
+          <div class="skill-card card h-100">
+            <div class="card-body">
+              <h5 class="card-title">Programming Languages</h5>
+              <p class="card-text">Python, Java, C++, JavaScript</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="skill-card card h-100">
+            <div class="card-body">
+              <h5 class="card-title">Web Technologies</h5>
+              <p class="card-text">HTML5, CSS3, Bootstrap, React, Node.js</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="skill-card card h-100">
+            <div class="card-body">
+              <h5 class="card-title">Tools & Databases</h5>
+              <p class="card-text">Git & GitHub, SQL, MongoDB, VS Code</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="py-5">
+    <div class="container">
+      <h2 class="section-title text-center mb-5 animate-on-scroll">Get in Touch</h2>
+      <div class="row">
+        <div class="col-md-8 mx-auto animate-on-scroll">
+          <form class="contact-form p-4">
+            <div class="mb-3">
+              <label for="name" class="form-label">Name</label>
+              <input type="text" class="form-control" id="name" required>
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Email address</label>
+              <input type="email" class="form-control" id="email" required>
+            </div>
+            <div class="mb-3">
+              <label for="message" class="form-label">Message</label>
+              <textarea class="form-control" id="message" rows="4" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-dark text-white text-center py-3">
+    <div class="container">
+      <p class="mb-0">&copy; 2025 Pratik Wankhede. All Rights Reserved.</p>
+      <a href="https://linkedin.com/in/your-profile" class="text-white mx-2">LinkedIn</a> |
+      <a href="https://github.com/your-username" class="text-white mx-2">GitHub</a>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <script>
+    /* Custom JS pulled from script.js */
+    document.addEventListener("DOMContentLoaded", function() {
+      const elements = document.querySelectorAll('.animate-on-scroll');
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('in-view');
+          }
+        });
+      }, { threshold: 0.2 });
+      elements.forEach(element => {
+        observer.observe(element);
+      });
+    });
+  </script>
+</body>
+</html>
